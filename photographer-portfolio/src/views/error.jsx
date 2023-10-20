@@ -2,9 +2,9 @@ function Error() {
 
     return (
       <>
-        <div>
-        404
-        </div>
+        <h1 className="text-6xl">
+          404
+        </h1>  
       </>
     )
   }

@@ -2,9 +2,9 @@ function Home() {
 
     return (
       <>
-        <div>
-        Home page
-        </div>
+        <h1 className="text-6xl">
+            Home page!
+        </h1>    
       </>
     )
   }

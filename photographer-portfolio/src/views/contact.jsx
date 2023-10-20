@@ -1,13 +1,13 @@
-function About() {
+function Contact() {
 
     return (
       <>
         <h1 className="text-6xl">
-            About page!
+            Contact page!
         </h1>  
       </>
     )
   }
   
-  export default About
+  export default Contact
   
