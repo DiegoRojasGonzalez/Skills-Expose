@@ -1,25 +1,29 @@
-import { useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const routes = [
     {
-      path: '/',
-      name: 'Home'
+      path: "/",
+      name: "Home",
     },
     {
-      path: '/about',
-      name: 'About'
+      path: "/about",
+      name: "About",
     },
     {
-      path: '/contact',
-      name: 'Contact'
+      path: "/Services",
+      name: "Services",
     },
     {
-      path: '/Services',
-      name: 'Services'
-    }
+      path: "/Works",
+      name: "Works",
+    },
+    {
+      path: "/Contact",
+      name: "Contact",
+    },
   ];
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,8 +33,11 @@ const Header = () => {
     <>
       <header className="">
         {isMenuOpen && (
-          <div className="fixed top-0 left-0 h-full w-full bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
-            <div className="absolute top-0 right-0 p-4">
+          <div
+            className="animate-fade-down animate-once animate-duration-700 animate-ease-in-out
+          fixed top-0 left-0 h-full w-full bg-gray-800 bg-opacity-50 flex items-center justify-center z-50"
+          >
+            <div className="absolute top-0 right-0  px-7 py-3">
               <button
                 onClick={toggleMenu}
                 className="text-3xl text-white focus:outline-none "
@@ -40,7 +47,11 @@ const Header = () => {
             </div>
             <div className="flex flex-col justify-center items-center text-white">
               {routes.map((route, index) => (
-                <Link key={index} className="my-2 text-white text-center" to={route.path}>
+                <Link
+                  key={index}
+                  className="my-2 text-white text-center"
+                  to={route.path}
+                >
                   {route.name}
                 </Link>
               ))}
